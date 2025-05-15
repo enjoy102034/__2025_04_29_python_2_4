@@ -1,11 +1,12 @@
-import tools
+#import tools
+from tools import calculate_bmi, get_state
 
 def main():
     # BMI計算
     try:
-        height:int = int(input('請輸入你的身高(公分 cm):'))
-        weight = eval(input('請輸入你的體重(公斤 kg):'))
-        bmi = tools.calculate_bmi(height,weight)
+        height:int = int(input('請輸入你的身高(公分 cm):'))        
+        weight = eval(input('請輸入你的體重(公斤 kg):'))        
+        bmi = calculate_bmi(height,weight)
     except ValueError:
         print('輸入發生錯誤')
     except Exception as e :
